@@ -52,7 +52,9 @@ public class Controller {
     @FXML
     void initialize() {
 
+        // insert api here
         String api = "02adaff5c8f8e814f17149a8b6b40737";
+
         getCityName.setOnAction(event -> {
             String city = cityName.getText().trim();
             if(!getCityName.equals("")) {
