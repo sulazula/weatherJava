@@ -39,15 +39,15 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <Button id="getCityName" fx:id="getCityName" layoutX="67.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: #bad5f5; -fx-background-radius: 20px;" text="Узнать погоду" textAlignment="CENTER">
+      <Button id="getCityName" fx:id="getCityName" alignment="CENTER" layoutX="72.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: #bad5f5; -fx-background-radius: 20px; -fx-alignment: center; -fx-text-alignment: center; -fx-min-width: 100px;" text="Узнать погоду" textAlignment="CENTER">
          <font>
-            <Font size="15.0" />
+            <Font size="14.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Text fx:id="text_info" fill="#f2fcfd" layoutX="27.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Информация:">
+      <Text fx:id="text_info" fill="#f2fcfd" layoutX="27.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Информация:" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
@@ -62,7 +62,7 @@
             <Font name="DejaVu Sans Mono Bold" size="16.0" />
          </font>
       </Text>
-      <Text id="minTemp" fx:id="minTemp" fill="WHITE" layoutX="25.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Минимальная:" wrappingWidth="118.9296875">
+      <Text id="minTemp" fx:id="minTemp" fill="WHITE" layoutX="25.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Минимальная:" wrappingWidth="171.9296875">
          <font>
             <Font name="DejaVu Sans Mono Bold" size="16.0" />
          </font>

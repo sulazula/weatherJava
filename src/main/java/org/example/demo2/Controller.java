@@ -85,8 +85,9 @@ public class Controller {
             ruLang = false;
 
             text_title.setText("Pogoda");
-            getCityName.setText("Sprawdz pogode");
-            text_info.setText("Informacja:");
+            cityName.setPromptText("Wpisz miasto:");
+            getCityName.setText("    Zatwierdz    ");
+            text_info.setText("  Informacja:");
             current.setText("Teraz:");
             feelsLike.setText("Odczuwa sie:");
             maxTemp.setText("Maksymalna");
@@ -98,6 +99,7 @@ public class Controller {
             ruLang = true;
 
             text_title.setText("Погода");
+            cityName.setPromptText("Введите город:");
             getCityName.setText("Узнать погоду");
             text_info.setText("Информация:");
             current.setText("Сейчас:");
