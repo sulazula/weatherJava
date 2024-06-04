@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="269.0" style="-fx-background-color: #5990cf; -fx-border-color: #376aa3; -fx-border-width: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo2.Controller">
+   <children>
+      <AnchorPane id="title_pane" prefHeight="73.0" prefWidth="269.0" style="-fx-background-color: #376aa3;">
+         <children>
+            <Text id="title_text" fill="WHITE" layoutX="55.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Погодa" textAlignment="CENTER" wrappingWidth="158.80126953125">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextField id="city" fx:id="cityName" layoutX="25.0" layoutY="80.0" promptText="Введите город:" style="-fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Button id="getCityName" fx:id="getCityName" layoutX="67.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: #bad5f5; -fx-background-radius: 20px;" text="Узнать погоду" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="#f2fcfd" layoutX="27.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Информация:">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Text>
+      <Text id="maxTemp" fx:id="maxTemp" fill="WHITE" layoutX="25.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Максимальная:">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text id="feelsLike" fx:id="feelsLike" fill="WHITE" layoutX="25.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ощущается:">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text id="minTemp" fx:id="minTemp" fill="WHITE" layoutX="25.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Минимальная:" wrappingWidth="118.9296875">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text id="currentTemp" fx:id="current" fill="WHITE" layoutX="25.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сейчас:">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
