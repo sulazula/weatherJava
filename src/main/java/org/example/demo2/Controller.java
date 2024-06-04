@@ -34,7 +34,24 @@ public class Controller {
     private Text minTemp;
 
     @FXML
+    private Button setPol;
+
+    @FXML
+    private Button setRus;
+
+    @FXML
+    private Text text_info;
+
+    @FXML
+    private Text text_title;
+
+    boolean polLang = false;
+    boolean ruLang = true;
+
+
+    @FXML
     void initialize() {
+
         String api = "02adaff5c8f8e814f17149a8b6b40737";
         getCityName.setOnAction(event -> {
             String city = cityName.getText().trim();
@@ -44,14 +61,49 @@ public class Controller {
                 System.out.println(output);
 
                 if (!output.isEmpty()) {
-                    JSONObject jsonObject = new JSONObject(output);
-                    current.setText("Сейчас: " + (jsonObject.getJSONObject("main").getInt("temp") - 273));
-                    feelsLike.setText("Ощущается: " + (jsonObject.getJSONObject("main").getInt("feels_like") - 273));
-                    maxTemp.setText("Максимальная: " + (jsonObject.getJSONObject("main").getInt("temp_max") - 273));
-                    minTemp.setText("Минимальная: " + (jsonObject.getJSONObject("main").getInt("temp_min") - 273));
+                    if (ruLang) {
+                        JSONObject jsonObject = new JSONObject(output);
+                        current.setText("Сейчас: " + (jsonObject.getJSONObject("main").getInt("temp") - 273));
+                        feelsLike.setText("Ощущается: " + (jsonObject.getJSONObject("main").getInt("feels_like") - 273));
+                        maxTemp.setText("Максимальная: " + (jsonObject.getJSONObject("main").getInt("temp_max") - 273));
+                        minTemp.setText("Минимальная: " + (jsonObject.getJSONObject("main").getInt("temp_min") - 273));
+                    } else {
+                        JSONObject jsonObject = new JSONObject(output);
+                        current.setText("Teraz:: " + (jsonObject.getJSONObject("main").getInt("temp") - 273));
+                        feelsLike.setText("Odczuwa sie: " + (jsonObject.getJSONObject("main").getInt("feels_like") - 273));
+                        maxTemp.setText("Maksymalna: " + (jsonObject.getJSONObject("main").getInt("temp_max") - 273));
+                        minTemp.setText("Minimalna: " + (jsonObject.getJSONObject("main").getInt("temp_min") - 273));
+                    }
                 }
             }
         });
+
+        setPol.setOnAction(event -> {
+            polLang = true;
+            ruLang = false;
+
+            text_title.setText("Pogoda");
+            getCityName.setText("Sprawdz pogode");
+            text_info.setText("Informacja:");
+            current.setText("Teraz:");
+            feelsLike.setText("Odczuwa sie:");
+            maxTemp.setText("Maksymalna");
+            minTemp.setText("Minimalna");
+        });
+
+        setRus.setOnAction(event -> {
+            polLang = false;
+            ruLang = true;
+
+            text_title.setText("Погода");
+            getCityName.setText("Узнать погоду");
+            text_info.setText("Информация:");
+            current.setText("Сейчас:");
+            feelsLike.setText("Ощущается:");
+            maxTemp.setText("Максимальная:");
+            minTemp.setText("Минимальная:");
+        });
+
     }
 
     private static String getContent(String urlAdress) {
